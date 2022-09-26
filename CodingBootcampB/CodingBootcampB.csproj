@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8541E05E-BD7A-4CE9-A0B2-1586BE291ED2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CodingBootcampB</RootNamespace>
+    <AssemblyName>CodingBootcampB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Assignment.cs" />
+    <Compile Include="Entities\Course.cs" />
+    <Compile Include="Entities\StudentsPerCourse.cs" />
+    <Compile Include="Entities\TrainersPerCourse.cs" />
+    <Compile Include="Enums\Choice.cs" />
+    <Compile Include="Enums\CourseType.cs" />
+    <Compile Include="Enums\StreamSubject.cs" />
+    <Compile Include="IHuman.cs" />
+    <Compile Include="ILearningMaterial.cs" />
+    <Compile Include="IPerCourse.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Trainer.cs" />
+    <Compile Include="RepositoryServices\AssignmentRepository\AssignmentRepository.cs" />
+    <Compile Include="RepositoryServices\CourseRepository\CourseRepository.cs" />
+    <Compile Include="RepositoryServices\IRepository.cs" />
+    <Compile Include="RepositoryServices\StudentsPerCourseRepository.cs" />
+    <Compile Include="RepositoryServices\StudentRepository\StudentRepository.cs" />
+    <Compile Include="RepositoryServices\TrainerRepository\TrainerRepository.cs" />
+    <Compile Include="RepositoryServices\TrainersPerCourseRepository.cs" />
+    <Compile Include="SchoolApplication.cs" />
+    <Compile Include="Services\AssignmentService.cs" />
+    <Compile Include="Services\CourseService.cs" />
+    <Compile Include="Services\HumanService.cs" />
+    <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\LearningMaterialService.cs" />
+    <Compile Include="Services\StudentService.cs" />
+    <Compile Include="Services\StudentsPerCourseService.cs" />
+    <Compile Include="Services\TrainerService.cs" />
+    <Compile Include="Services\TrainersPerCourseService.cs" />
+    <Compile Include="Views\ApplicationPrint.cs" />
+    <Compile Include="Views\AssignmentView\InputAssignment.cs" />
+    <Compile Include="Views\AssignmentView\PrintAssignment.cs" />
+    <Compile Include="Views\CourseView\InputCourse.cs" />
+    <Compile Include="Views\CourseView\PrintCourse.cs" />
+    <Compile Include="Views\IInput.cs" />
+    <Compile Include="Views\IInputPerCourse.cs" />
+    <Compile Include="Views\IPrint.cs" />
+    <Compile Include="Views\StudentsPerCourseView\InputStudentsPerCourse.cs" />
+    <Compile Include="Views\StudentsPerCourseView\PrintStudentsPerCourse.cs" />
+    <Compile Include="Views\StudentView\InputStudent.cs" />
+    <Compile Include="Views\StudentView\PrintStudent.cs" />
+    <Compile Include="Views\TrainersPerCourseView\InputTrainersPerCourse.cs" />
+    <Compile Include="Views\TrainersPerCourseView\PrintTrainersPerCourse.cs" />
+    <Compile Include="Views\TrainerView\InputTrainer.cs" />
+    <Compile Include="Views\TrainerView\PrintTrainer.cs" />
+    <Compile Include="Views\ViewMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
